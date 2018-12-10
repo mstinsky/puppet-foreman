@@ -14,7 +14,7 @@ class foreman::puppetmaster (
   Stdlib::Absolutepath $puppet_etcdir = $::foreman::puppetmaster::params::puppet_etcdir,
   Integer $timeout = $::foreman::puppetmaster::params::puppetmaster_timeout,
   Integer $report_timeout = $::foreman::puppetmaster::params::puppetmaster_report_timeout,
-  Stdlib::Absolutepath $ssl_ca = $::foreman::puppetmaster::params::client_ssl_ca,
+  Variant[Undef, Stdlib::Absolutepath, String[0,0]] $ssl_ca = $::foreman::puppetmaster::params::client_ssl_ca,
   Stdlib::Absolutepath $ssl_cert = $::foreman::puppetmaster::params::client_ssl_cert,
   Stdlib::Absolutepath $ssl_key = $::foreman::puppetmaster::params::client_ssl_key,
   Enum['v2'] $enc_api = 'v2',
