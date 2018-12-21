@@ -6,7 +6,7 @@
 #
 # $version::  Package version to install, defaults to installed
 #
-class foreman::compute::Proxmox(String $version = 'installed') {
+class foreman::compute::proxmox(String $version = 'installed') {
   package { 'ruby-foreman-fog-proxmox':
     ensure => $version,
     tag    => [ 'foreman-compute', ],
